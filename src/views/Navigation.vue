@@ -8,7 +8,9 @@
           </li>
           <li class="nav-item">
             <router-link to="/cart" class="nav-link"
-              >Корзина <span class="badge badge-info">0</span></router-link
+              >Корзина
+              <span class="badge badge-info">{{ totalInCart }}</span>
+            </router-link
             >
           </li>
         </ul>
@@ -19,6 +21,6 @@
 
 <style lang="scss" scoped></style>
 
-<script>
-export default {};
+<script setup>
+import { totalInCart } from "@/stores/cartStore";
 </script>
